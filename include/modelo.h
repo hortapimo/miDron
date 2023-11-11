@@ -1,0 +1,8 @@
+class Modelo
+{
+private:
+public:
+
+};
+
+
