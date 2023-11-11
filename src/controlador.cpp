@@ -1,37 +1,50 @@
 #include "controlador.h"
 #include "modelo.h"
 
-#define MOVER_ADELANTE 
-#define MOVER_ATRAS 
-#define MOVER_DERECHA
-#define MOVER_IZQUIERDA
-#define MOVER_ABAJO
-#define MOVER_ARRIBA
+#define MOVER_NORTE 'A'
+#define MOVER_NORESTE 'B'
+#define MOVER_ESTE 'C'
+#define MOVER_SURESTE 'D'
+#define MOVER_SUR 'E'
+#define MOVER_SUROESTE 'F'
+#define MOVER_OESTE 'G'
+#define MOVER_NOROESTE 'H'
 
 void Controlador::procesarComando(char comando)
 {
     switch (comando)
     {
-    case MOVER_ADELANTE:
-        /* code */
-        break;
-    case MOVER_ATRAS:
-        /* code */
-        break;
-    case MOVER_DERECHA:
-        /* code */
-        break;
-    case MOVER_IZQUIERDA:
-        /* code */
-        break;
-    case MOVER_ABAJO:
-        /* code */
-        break;
-    case MOVER_ARRIBA:
-        /* code */
-        break;
-    
-    default:
-        break;
+        case MOVER_NORTE:
+            /* code */
+            break;
+        case MOVER_NORESTE:
+            /* code */
+            break;
+        case MOVER_ESTE:
+            /* code */
+            break;
+        case MOVER_SURESTE:
+            /* code */
+            break;
+        case MOVER_SUR:
+            /* code */
+            break;
+        case MOVER_SUROESTE:
+            /* code */
+            break;
+        case MOVER_OESTE:
+            /* code */
+            break;
+        case MOVER_NOROESTE:
+            /* code */
+            break;
+        
+        default:
+            break;
     }
 };
+
+void Controlador::iniciar()
+{
+    iniciarDron();
+}

@@ -10,3 +10,4 @@ namespace estabilizar
 
 }
 
+void iniciarDron();

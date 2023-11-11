@@ -10,7 +10,8 @@ Controlador controlador;
 void setup() {
   SerialBT.begin("ESP32test"); 
   Serial.begin(115200);
-}
+  controlador.iniciar();
+  }
 
 void loop() {
 

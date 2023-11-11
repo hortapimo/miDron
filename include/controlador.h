@@ -5,6 +5,7 @@ class Controlador
 {
 public:
     void procesarComando(char comando);
+    void iniciar();
     
 };
 
