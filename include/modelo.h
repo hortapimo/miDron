@@ -1,8 +1,12 @@
-class Modelo
+#pragma once
+
+namespace mover
 {
-private:
-public:
 
-};
+}
 
+namespace estabilizar
+{
+
+}
 

@@ -1,9 +1,12 @@
 #include <Arduino.h>
 #include "BluetoothSerial.h"
-#include <iostream>
-
+#include "controlador.h"
 
 BluetoothSerial SerialBT;
+Controlador controlador;
+
+
+
 void setup() {
   SerialBT.begin("ESP32test"); 
   Serial.begin(115200);
@@ -12,7 +15,7 @@ void setup() {
 void loop() {
 
   if (SerialBT.available()){
-    Serial.println(char(SerialBT.read()));
+    controlador.procesarComando(char(SerialBT.read()));
   }
 
 }
