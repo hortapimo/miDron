@@ -6,7 +6,6 @@ BluetoothSerial SerialBT;
 Controlador controlador;
 
 
-
 void setup() {
   SerialBT.begin("ESP32test"); 
   Serial.begin(115200);
