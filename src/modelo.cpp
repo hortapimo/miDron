@@ -18,8 +18,9 @@
 #define EXITO 1
 
 const int maxRes = pow(2,RES);
-
+int dutyCicle = maxRes/2;
 //funciones privadas de este modulo
+
 void iniciarPines()
 {
 ledcSetup(CH_M1, FREC, RES);
@@ -33,9 +34,41 @@ ledcAttachPin(PIN_M2,CH_M2);
 ledcAttachPin(PIN_M3,CH_M3);
 ledcAttachPin(PIN_M4,CH_M4);
 
+ledcWrite(CH_M1,dutyCicle);
+ledcWrite(CH_M2,dutyCicle);
+ledcWrite(CH_M3,dutyCicle);
+ledcWrite(CH_M4,dutyCicle);
+
 }
 
+namespace mover{
 
+    void subir()
+    {
+
+        if(dutyCicle + 0.1* dutyCicle < maxRes){
+            dutyCicle = dutyCicle + 0.1* dutyCicle;
+        }
+
+        ledcWrite(CH_M1,dutyCicle);
+        ledcWrite(CH_M2,dutyCicle);
+        ledcWrite(CH_M3,dutyCicle);
+        ledcWrite(CH_M4,dutyCicle);
+    }
+
+    void bajar()
+    {
+
+        if(dutyCicle - 0.1* dutyCicle > 0){
+            dutyCicle = dutyCicle - 0.1* dutyCicle;
+        }
+
+        ledcWrite(CH_M1,dutyCicle);
+        ledcWrite(CH_M2,dutyCicle);
+        ledcWrite(CH_M3,dutyCicle);
+        ledcWrite(CH_M4,dutyCicle);
+    }
+}
 
 
 //funciones publicas del modulo

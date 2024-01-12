@@ -9,6 +9,8 @@
 #define MOVER_SUROESTE 'F'
 #define MOVER_OESTE 'G'
 #define MOVER_NOROESTE 'H'
+#define SUBIR 'X'
+#define BAJAR 'Y'
 
 void Controlador::procesarComando(char comando)
 {
@@ -37,6 +39,12 @@ void Controlador::procesarComando(char comando)
             break;
         case MOVER_NOROESTE:
             /* code */
+            break;
+        case SUBIR:
+            mover::subir();
+            break;
+        case BAJAR:
+            mover::bajar();
             break;
         
         default:

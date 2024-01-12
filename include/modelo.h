@@ -2,7 +2,8 @@
 
 namespace mover
 {
-
+    void subir();
+    void bajar();
 }
 
 namespace estabilizar
